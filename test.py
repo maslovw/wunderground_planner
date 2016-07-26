@@ -15,11 +15,13 @@ ws = wb.get_sheet_by_name("CITIES")
 i = 468
 weather = Wunderground("f3373e1bbfc03936")
 if 1:
-    if 1: #while ws["A" + str(i)].value != None:
+    while ws["A" + str(i)].value != None:
+        city_name = ws['A' + str(i)].value.encode("utf-8")
+        country_name = ws['B' + str(i)].value.encode("utf-8")
         print(i, "req: ", weather.req_cnt)
-        print(ws['A' + str(i)].value, ws['B' + str(i)].value)
+        print(city_name, country_name)
         try:
-            city_info = weather.get_year_weather(ws['B' + str(i)].value.strip(), ws['A' + str(i)].value.strip())
+            city_info = weather.get_year_weather(country_name, city_name)
             try:
                 udata = [
                     city_info['city_name'],
@@ -46,15 +48,15 @@ if 1:
         except NameError as e:
             print(" >> ", e)
             udata = [
-                ws['A' + str(i)].value,
-                ws['B' + str(i)].value,
+                city_name.decode('utf-8', 'ignore'),
+                country_name.decode('utf-8', 'ignore'),
                 'unknown'
                 ]
             writCsv(udata, 'unknown.csv')
         except:
             udata = [
-                ws['A' + str(i)].value,
-                ws['B' + str(i)].value,
+                city_name.decode('utf-8', 'ignore'),
+                country_name.decode('utf-8', 'ignore'),
                 'unknown'
             ]
             writCsv(udata, 'unknown.csv')

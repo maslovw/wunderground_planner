@@ -35,7 +35,7 @@ class Wunderground:
         return [city_name, country_name, lat, lon, max_temp, min_temp, city_url]
 
     def __getDirName(self, country, city):
-        return "countrys/" + country + "/" + city
+        return "countrys/" + country.decode('utf-8', 'ignore') + "/" + city.decode('utf-8', 'ignore')
 
     def __get_weather_file(self, file_name):
         with open(file_name) as json_file:
@@ -44,7 +44,7 @@ class Wunderground:
 
 
     def __getFileName(self, country, city, dates):
-        return self.__getDirName(country, city) + "/" + ".".join([country, city, dates]) + ".json"
+        return self.__getDirName(country, city) + "/" + ".".join([country.decode('utf-8', 'ignore'), city.decode('utf-8', 'ignore'), dates]) + ".json"
 
     def __saveJsonFile(self, html, country, city, dates):
         file_name = self.__getFileName(country, city, dates)
