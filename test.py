@@ -13,7 +13,7 @@ wb = load_workbook("160720_RIKA_CONTENT.xlsx")
 ws = wb.get_sheet_by_name("CITIES")
 
 i = 468
-weather = Wunderground("f3373e1bbfc03936")
+weather = Wunderground("")
 if 1:
     while ws["A" + str(i)].value != None:
         city_name = ws['A' + str(i)].value.encode("utf-8")
