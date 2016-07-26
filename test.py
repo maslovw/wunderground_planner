@@ -2,6 +2,7 @@ import csv
 from openpyxl import Workbook
 from openpyxl import load_workbook
 from getWeatherFree import Wunderground
+import json
 
 def writCsv(udata, file_name = 'db.csv'):
     with open(file_name, 'a', newline='') as csvfile:
@@ -11,13 +12,24 @@ def writCsv(udata, file_name = 'db.csv'):
 
 wb = load_workbook("160720_RIKA_CONTENT.xlsx")
 ws = wb.get_sheet_by_name("CITIES")
+dec_str = 'ascii'
 
-i = 468
-weather = Wunderground("")
+try:
+    with open('app.json', 'r') as f:
+        config = json.load(f)
+except:
+    config = {'line': 4}
+
+try:
+    i = config['line']
+except:
+    i = 4
+
+weather = Wunderground()
 if 1:
     while ws["A" + str(i)].value != None:
-        city_name = ws['A' + str(i)].value.encode("utf-8")
-        country_name = ws['B' + str(i)].value.encode("utf-8")
+        city_name = ws['A' + str(i)].value.encode("utf-8").strip()
+        country_name = ws['B' + str(i)].value.encode("utf-8").strip()
         print(i, "req: ", weather.req_cnt)
         print(city_name, country_name)
         try:
@@ -48,19 +60,23 @@ if 1:
         except NameError as e:
             print(" >> ", e)
             udata = [
-                city_name.decode('utf-8', 'ignore'),
-                country_name.decode('utf-8', 'ignore'),
+                city_name.decode(dec_str, 'ignore'),
+                country_name.decode(dec_str, 'ignore'),
                 'unknown'
                 ]
             writCsv(udata, 'unknown.csv')
         except:
             udata = [
-                city_name.decode('utf-8', 'ignore'),
-                country_name.decode('utf-8', 'ignore'),
+                city_name.decode(dec_str, 'ignore'),
+                country_name.decode(dec_str, 'ignore'),
                 'unknown'
             ]
             writCsv(udata, 'unknown.csv')
             print(" >> can't get", ws['A' + str(i)].value)
+            break
         i += 1
+        config['line'] = i
+        with open('app.json', 'w') as f:
+            json.dump(config, f)
 
 #wb_out.save('db.xlsx')

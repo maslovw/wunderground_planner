@@ -6,6 +6,7 @@ from urllib.request import urlopen
 from urllib.request import Request
 from urllib.parse import quote
 from bs4 import BeautifulSoup
+from config import WeatherConfig
 
 class Wunderground:
     key = ""
@@ -14,12 +15,18 @@ class Wunderground:
     max_req_a_day = 500
     req_cnt = 100
     url = ""
+    dec_str = 'ascii'
 
-    def __init__(self, key, sleep_time=6, max_cnt=500, init_cnt=0):
-        self.key = key
+    def __init__(self, key="", sleep_time=6, max_cnt=500, init_cnt=0):
         self.sleep_time = sleep_time
         self.max_req_a_day = max_cnt
-        self.req_cnt = init_cnt
+        self.cfg = WeatherConfig()
+        self.cfg.load()
+        if key == "":
+            self.key = self.cfg.keys()[0]
+        else:
+            self.key = self.cfg.add_key(key)
+        self.req_cnt = self.cfg.req_cnt(self.key)
 
     def __get_weather_from_json(self, json_str):
         try:
@@ -35,7 +42,7 @@ class Wunderground:
         return [city_name, country_name, lat, lon, max_temp, min_temp, city_url]
 
     def __getDirName(self, country, city):
-        return "countrys/" + country.decode('utf-8', 'ignore') + "/" + city.decode('utf-8', 'ignore')
+        return "countrys/" + country.decode(self.dec_str, 'ignore') + "/" + city.decode(self.dec_str, 'ignore')
 
     def __get_weather_file(self, file_name):
         with open(file_name) as json_file:
@@ -44,7 +51,7 @@ class Wunderground:
 
 
     def __getFileName(self, country, city, dates):
-        return self.__getDirName(country, city) + "/" + ".".join([country.decode('utf-8', 'ignore'), city.decode('utf-8', 'ignore'), dates]) + ".json"
+        return self.__getDirName(country, city) + "/" + ".".join([country.decode(self.dec_str, 'ignore'), city.decode(self.dec_str, 'ignore'), dates]) + ".json"
 
     def __saveJsonFile(self, html, country, city, dates):
         file_name = self.__getFileName(country, city, dates)
@@ -61,7 +68,8 @@ class Wunderground:
         html = urlopen(self.url).read()
         json_str = json.loads(html.decode("utf-8", errors="ignore"))
         self.__saveJsonFile(json_str, country, city, dates)
-        self.req_cnt += 1
+        self.req_cnt = self.cfg.inc_req(self.key)
+        self.cfg.save()
         sleep(self.sleep_time)
         return self.__get_weather_from_json(json_str)
 
