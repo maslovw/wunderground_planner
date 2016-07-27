@@ -37,10 +37,14 @@ class WeatherConfig:
             return []
 
     def inc_req(self, key):
+        print('some')
         my_date = datetime.datetime.now(pytz.timezone('US/Pacific'))
         cfg_date = my_date.strftime("%d/%m/%Y")
         try:
+            if key in self.config[cfg_date]:
                 self.config[cfg_date][key] += 1
+            else:
+                self.config[cfg_date][key] = 1
         except:
             self.config[cfg_date] = {key: 1}
         return self.config[cfg_date][key]
@@ -51,5 +55,8 @@ class WeatherConfig:
             cfg_date = my_date.strftime("%d/%m/%Y")
             return self.config[cfg_date][key]
         except:
-            self.config[cfg_date] = {key: 1}
+            try:
+                self.config[cfg_date][key] = 1
+            except:
+                self.config[cfg_date] = {key: 1}
             return 1

@@ -12,8 +12,8 @@ class Wunderground:
     key = ""
     url_head = "http://api.wunderground.com/api/"
     sleep_time = 6
-    max_req_a_day = 500
-    req_cnt = 100
+    max_req_a_day = 3
+    req_cnt = 1
     url = ""
     dec_str = 'ascii'
 
@@ -60,10 +60,28 @@ class Wunderground:
         with open(file_name, "w") as json_file:
             json.dump(html, json_file, ensure_ascii=True)
 
+    def __find_key(self, key):
+        for item in self.cfg.keys():
+            if item != key:
+                if self.cfg.req_cnt(item) < self.max_req_a_day:
+                    return item
+        return None
+
+    def __switch_key(self):
+        new_key = self.__find_key(self.key)
+        if not (new_key is None):
+            self.key = new_key
+            self.req_cnt = self.cfg.req_cnt(self.key)
+            print("!!! Key changed: ", self.key)
+            return self.key
+        return None
+
+
     def __get_weather_from_web(self, country, city, dates):
         print("getting from the web")
         if self.req_cnt >= self.max_req_a_day:
-            raise
+            if self.__switch_key() is None:
+                raise
         self.url = self.url_head + self.key + "/geolookup/planner_" + dates + "/q/" + quote(country) + "/" + quote(city) + ".json"
         html = urlopen(self.url).read()
         json_str = json.loads(html.decode("utf-8", errors="ignore"))
