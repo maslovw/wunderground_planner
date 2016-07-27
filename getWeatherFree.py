@@ -72,13 +72,13 @@ class Wunderground:
         if not (new_key is None):
             self.key = new_key
             self.req_cnt = self.cfg.req_cnt(self.key)
-            print("!!! Key changed: ", self.key)
+            #print("!!! Key changed: ", self.key)
             return self.key
         return None
 
 
     def __get_weather_from_web(self, country, city, dates):
-        print("getting from the web")
+        #print("getting from the web")
         if self.req_cnt >= self.max_req_a_day:
             if self.__switch_key() is None:
                 raise
@@ -104,8 +104,10 @@ class Wunderground:
         if os.path.isfile(file_name):
             try:
                 return self.__get_weather_file(file_name)
+            except NameError as e:
+                raise e
             except:
-                os.remove(file_name)
+                #os.remove(file_name)
                 return self.__get_weather_from_web(country, city, dates)
         else:
             return self.__get_weather_from_web(country, city, dates)

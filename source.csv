@@ -1,380 +1,6 @@
-The Bahamas;The Bahamas;unknown
-Barbados;Barbados;unknown
-Buenos Aires;Argentina;unknown
-Sao Paulo;Brazil;unknown
-Rio de Janeiro;Brazil;unknown
-Salvador;Brazil;unknown
-Santiago;Chile;unknown
-Cartagena;Colombia;unknown
-Quito;Ecuador;unknown
-Asuncin;Paraguay;unknown
-Lima;Peru;unknown
-Caracas;Venezuela;unknown
-Montevideo;Uruguay;unknown
-Cape Verde;Cabo Verde;unknown
-Greenland;Greenland;unknown
-Antarctica;Antarctica;unknown
-Maldives;Maldives;unknown
-Cambodia;Cambodia;unknown
-Ubud;Indonesia;unknown
-Playa del Carmen;Mexico;unknown
-Cuscu;Peru;unknown
-Atacama;Chile;unknown
-Sahara Desert;Egypt;unknown
-Brittany;France;unknown
-Transylvania;Romania;unknown
-Botswana;Botswana;unknown
-Patagonia;Argentina Chile;unknown
-Geirangerfjord;Norway;unknown
-Lao Kai;Vietnam;unknown
-Salar De Uyuni;Bolivia;unknown
-Yosemite;USA;unknown
-Lake Banff;Canada;unknown
-Alaska;USA;unknown
-Pamukkale;Turkey;unknown
-Meteora;Greece;unknown
-Fiordland;New Zealand;unknown
-Korsika;France;unknown
-Sardinia;Italy;unknown
-Monte Carlo;Monaco;unknown
-Kotor;Montenegro;unknown
-Bilbao;Spain;unknown
-Arcachon;France;unknown
-St. Malo;France;unknown
-Auvergne;France;unknown
-Estonia;Estonia;unknown
-Costa Rica;Costa Rica;unknown
-Western Australia;Australia;unknown
-Australia;Australia;unknown
-Xian;China;unknown
-Croatia;Croatia;unknown
-Puerto Rico;Puerto Rico;unknown
-Tenerife;Tenerife;unknown
-Fuerteventura;Spain;unknown
-Malta;Malta;unknown
-La Gomera;Spain;unknown
-Argentina;Argentina;unknown
-White Desert;Egypt;unknown
-Palm Springs;USA;unknown
-Bibione;Italy;unknown
-San Vito Lo Capo;Italy;unknown
-Cavallino-Treporti;Italy;unknown
-Lido di Jesolo;Italy;unknown
-Spiaggia dei Conigli;Italy;unknown
-Capo Vaticano;Italy;unknown
-Shkodr;Albania;unknown
-Algier;Algeria;unknown
-In Salah;Algeria;unknown
-Atigua;Antigua and Barbuda;unknown
-Barbuda;Antigua and Barbuda;unknown
-Baha Blanca;Argentina;unknown
-Sarmiento;Argentina;unknown
-Alice Springs;Australia;unknown
-Angra do Herosmo;Azores;unknown
-Madeira;Azores;unknown
-Bragana;Portugal;unknown
-Formentera Island (Spain);Balearic Islands;unknown
-Minorca;Balearic Islands;unknown
-Maluku Islands;Indonesia;unknown
-Borneo;Indonesia;unknown
-Ujung Padang;Indonesia;unknown
-St. Lucia;South Africa;unknown
-Castries;St. Lucia;unknown
-Kingstown;Saint Vincent and the Grenadines;unknown
-St. George's;Grenada;unknown
-La Paz;Bolivia;unknown
-Gran Chaco;Bolivia;unknown
-So Francisco do Sul;Brazil;unknown
-Goiania;Brazil;unknown
-Porto Alegre;Brazil;unknown
-Punta Arenas;Chile;unknown
-Xinjiang;China;unknown
-Huang He;China;unknown
-Manchuria;China;unknown
-Chongqing;China;unknown
-Macau;China;unknown
-Punta Arenas;Chile;unknown
-San Jos;Costa Rica;unknown
-Faroe Islands;Denmark;unknown
-Aero Island;Denmark;unknown
-Falster;Denmark;unknown
-Langeland;Denmark;unknown
-Lolland;Denmark;unknown
-Jutland;Denmark;unknown
-Fanoe;Denmark;unknown
-Sankt Peter-Ording;Germany;unknown
-Isernhagen;Germany;unknown
-Neuschwanstein Castle;Germany;unknown
-Tahiti;French Polonesia;unknown
-Hispaniola;Greater Antilles;unknown
-La Altagracia;Dominican Republic;unknown
-El Hierro;Canary Islands;unknown
-San Salvador;El Salvador;unknown
-Isles of Scilly;England;unknown
-Isle of Wight;England;unknown
-Tintagel;England;unknown
-Birmingham;England;unknown
-Liverpool;England;unknown
-Manchester;England;unknown
-Nottingham;England;unknown
-Windsor;England;unknown
-Bristol;England;unknown
-Oxford;England;unknown
-Chillern Hills;England;unknown
-Ridgeway Path;England;unknown
-Lake District;England;unknown
-Blackpool;England;unknown
-Peak District;England;unknown
-Chester Plain;England;unknown
-Cheshire Plain;England;unknown
-Isle of Man;England;unknown
-Newcastle;England;unknown
-Northumberland Park;England;unknown
-Yorkshire Park;England;unknown
-Leeds;England;unknown
-Lindisfarne Island;England;unknown
-Berwick-upon-Tweed;England;unknown
-Cleveland Hills;England;unknown
-Angel of the North;England;unknown
-Carlisle;England;unknown
-Edinburgh;Scotland;unknown
-Glasgow;Scotland;unknown
-Galloway;Scotland;unknown
-Highlands;Scotland;unknown
-Skye;Scotland;unknown
-Hebrides;Scotland;unknown
-Orkney;Scotland;unknown
-Shetland;Scotland;unknown
-Isle of Arran;Scotland;unknown
-Dundee;Scotland;unknown
-Dumfries;Scotland;unknown
-Scottish Borders;Scotland;unknown
-St. Andrews;Scotland;unknown
-Glens of Antrim;Northern Ireland;unknown
-Glenariff;Northern Ireland;unknown
-Causeway Coast;Northern Ireland;unknown
-Sperrin Mountains;Northern Ireland;unknown
-Armagh;Northern Ireland;unknown
-Mourne Mountains;Northern Ireland;unknown
-Wicklow Mountains;Ireland;unknown
-County Kerry;Ireland;unknown
-Monaghan;Ireland;unknown
-Drumlane;Ireland;unknown
-Tullynally Castle;Ireland;unknown
-Fore Abbey;Ireland;unknown
-Kells;Ireland;unknown
-Carlingford;Ireland;unknown
-Monasterboice;Ireland;unknown
-Boyne Valley;Ireland;unknown
-Mellifont Abbey;Ireland;unknown
-Hill of Tara;Ireland;unknown
-Athlone;Ireland;unknown
-Clonmacnoise;Ireland;unknown
-Saaremaa;Estonia;unknown
-Pirita;Estonia;unknown
-Trshavn;Faroe Islands;unknown
-La Savina;Formentera Island (Spain);unknown
-Es Pujols;Formentera Island (Spain);unknown
-La Mola;Spain;unknown
-Cap de Barbaria;Formentera Island (Spain);unknown
-Playa de Ses Illetes;Formentera Island (Spain);unknown
-Platja de Llevant;Formentera Island (Spain);unknown
-Es Pujols;Formentera Island (Spain);unknown
-Playa Sa Roqueta;Formentera Island (Spain);unknown
-San Fernando;Spain;unknown
-Sant Francesc;Formentera Island (Spain);unknown
-Playa de Migjorn;Formentera Island (Spain);unknown
-Platja de Tramuntana;Formentera Island (Spain);unknown
-Es Calo;Formentera Island (Spain);unknown
-El Pilar;Formentera Island (Spain);unknown
-Almera;Andalusia Spain;unknown
-Cndiz;Andalusia Spain;unknown
-Crdoba;Andalusia Spain;unknown
-Granada;Andalusia Spain;unknown
-Huelva;Andalusia Spain;unknown
-Jan;Andalusia Spain;unknown
-Mlaga;Andalusia Spain;unknown
-Seville;Andalusia Spain;unknown
-Guadalquivir;Andalusia Spain;unknown
-Marco de Jerez;Andalusia Spain GOLF!!;unknown
-Condado de Huelva;Andalusia Spain;unknown
-Montilla-Moriles;Andalusia Spain;unknown
-Costa del Sol;Andalusia Spain;unknown
-Costa De La Luz;Andalusia Spain;unknown
-Sotogrande;Andalusia Spain GOLF!!;unknown
-Nerja;Andalusia Spain;unknown
-Almunecar;Andalusia Spain;unknown
-Salobrena;Andalusia Spain;unknown
-Torremolinos;Andalusia Spain;unknown
-Fuengirola;Andalusia Spain;unknown
-Ronda;Andalusia Spain;unknown
-Los Caos de Meca;Andalusia Spain;unknown
-Playa de la Barrosa;Andalusia Spain;unknown
-Conil de la Frontera;Andalusia Spain;unknown
-Jerez;Andalusia Spain;unknown
-Sanlcar de Barrameda;Andalusia Spain;unknown
-Doana National Park;Andalusia Spain;unknown
-Costa Blanca;Spain;unknown
-Region of Murcia;Spain;unknown
-Elche;Spain;unknown
-Monver;Spain;unknown
-La Manga;Spain;unknown
-Alcal de Xivert;Spain;unknown
-Alcossebre;Spain;unknown
-Castelln de la Plana;Spain;unknown
-Oropesa del Mar;Spain;unknown
-Sant Mateu;Spain;unknown
-Moraira;Spain;unknown
-Villajoyosa;Spain;unknown
-Chulila;Spain;unknown
-El Palmar;Spain;unknown
-El Saler;Spain;unknown
-Lloret De Mar;Costa Brava Spain;unknown
-El Port de la Selva;Costa Brava Spain;unknown
-Llanca;Costa Brava Spain;unknown
-Figueres;Costa Brava Spain;unknown
-L`Escala;Costa Brava Spain;unknown
-L`Estartit;Costa Brava Spain;unknown
-San Pere Pescador;Costa Brava Spain;unknown
-Torroella De Montgri;Costa Brava Spain;unknown
-Callella De Palafrugell;Costa Brava Spain;unknown
-Llafranc;Costa Brava Spain;unknown
-Tamariu;Costa Brava Spain;unknown
-La Bisbal D`Emporda;Costa Brava Spain;unknown
-Madremanya;Costa Brava Spain;unknown
-Peralada;Costa Brava Spain;unknown
-Santuari Dels Angels;Costa Brava Spain;unknown
-Ullastret;Costa Brava Spain;unknown
-Roses;Costa Brava Spain;unknown
-Empuriabrava;Costa Brava Spain;unknown
-Natural Park of the Aiguamolls de l'Empord;Costa Brava Spain;unknown
-Sant Feliu de Guixols;Costa Brava Spain;unknown
-Platja DAro;Costa Brava Spain;unknown
-S'agaro;Costa Brava Spain;unknown
-Tossa De Mar;Costa Brava Spain;unknown
-Serra de l'Albera Natural Park;Costa Brava Spain;unknown
-Restinga;El Hierro Canarias;unknown
-El Pinar;Canary Islands;unknown
-El Sabinar;Canary Islands;unknown
-Faro de Orchilla;El Hierro Canarias;unknown
-El Golfo Valley;El Hierro Canarias;unknown
-Puerto del Rosario;Fuerteventura;unknown
-Caleta de Fuste;Fuerteventura;unknown
-La Lajita;Spain;unknown
-Morro Jable;Fuerteventura;unknown
-Baha Feliz;Gran Canaria;unknown
-Playa del Ingls;Gran Canaria;unknown
-Playa de Taurito;Gran Canaria;unknown
-Maspalomas;Gran Canaria;unknown
-San Agustin;Gran Canaria;unknown
-Puerto Rico;Gran Canaria;unknown
-Puerto de Mogan;Gran Canaria;unknown
-Sant Antoni;Ibiza Spain;unknown
-Cala Blanca;Ibiza Spain;unknown
-Es Figueral;Ibiza Spain;unknown
-Santa Eulalia;Ibiza Spain;unknown
-Sant Josep;Ibiza Spain;unknown
-Sant Joan;Ibiza Spain;unknown
-La Marina;Ibiza Spain;unknown
-Sa Talaiassa;Ibiza Spain;unknown
-San Carlos;Ibiza Spain;unknown
-Illa de Tagomago;Ibiza Spain;unknown
-Portinatx;Ibiza Spain;unknown
-Sant Gertrudis;Ibiza Spain;unknown
-Sant Llorenc des Cardassar;Ibiza Spain;unknown
-San Rafael de Forca;Ibiza Spain;unknown
-Santiago De Compostela;Camino de Santiago;unknown
-Cape Finisterre;Camino de Santiago;unknown
-Somport;Camino de Santiago;unknown
-French Way;Camino de Santiago;unknown
-Rioja;Camino de Santiago;unknown
-Leon;Camino de Santiago;unknown
-Galicia;Camino de Santiago;unknown
-Camino Aragons;Camino de Santiago;unknown
-Canfranc;Camino de Santiago;unknown
-Gibraltar;Spain;unknown
-Ionian Islands;Greece;unknown
-Delphi;Greece;unknown
-Pineios;Greece;unknown
-Mount Athos;Greece;unknown
-Attica;Greece;unknown
-Ionian Islands;Greece;unknown
-Chalkidiki;Greece;unknown
-Sporades;Greece;unknown
-Peloponnese;Greece;unknown
-Thrace;Greece;unknown
-Epirus;Greece;unknown
-Thessaly;Greece;unknown
-Evia;Greece;unknown
-Boeotia;Greece;unknown
-Phocis;Greece;unknown
-Locris;Greece;unknown
+CagliariCagliari;Italy;unknown
+Dominica Antilles;;unknown
 Aetolia;Greece;unknown
-Arcadia;Greece;unknown
-Saronic Islands;Greece;unknown
-Argolis;Greece;unknown
-Heraion;Greece;unknown
-Archaia Nemea;Greece;unknown
-Hydra;Greece;unknown
-Spetses;Greece;unknown
-Nikopolis;Greece;unknown
-Metsovo;Greece;unknown
-Messene;Greece;unknown
-Sicyon;Greece;unknown
-Kechries;Greece;unknown
-Mani Peninsula;Greece;unknown
-Kalambaka;Greece;unknown
-Kastraki;Greece;unknown
-Monemvasia;Greece;unknown
-Mycenae;Greece;unknown
-Olympia;Greece;unknown
-Patras;Greece;unknown
-Amorgos Island;Greece;unknown
-Chios Island;Greece;unknown
-Delos Island;Greece;unknown
-Icaria Island;Greece;unknown
-Ios Island;Greece;unknown
-Karpathos Island;Greece;unknown
-Kastellorizo Island;Greece;unknown
-Kea Island;Greece;unknown
-Kos Island;Greece;unknown
-Lesbos;Greece;unknown
-Lemnos;Greece;unknown
-Milos;Greece;unknown
-Paros;Greece;unknown
-Patmos;Greece;unknown
-Samos;Greece;unknown
-Samothraki;Greece;unknown
-Serifos;Greece;unknown
-Skiathos;Greece;unknown
-Skyros;Greece;unknown
-Syros;Greece;unknown
-Thassos;Greece;unknown
-Tinos;Greece;unknown
-Qaanaaq;Greenland;unknown
-Baffin Bay;Greenland;unknown
-Nuuk;Greenland;unknown
-Antigua Guatemala;Guatemala;unknown
-Livingston;Guatemala;unknown
-Quetzaltenango;Guatemala;unknown
-Chichicastenango;Guatemala;unknown
-Georgetown;Guyana;unknown
-Pepeekeo;Hawaii;unknown
-Vlissingen;Netherlands;unknown
-Utrecht;Netherlands;unknown
-Bwindi Impenetrable National Park;Uganda;unknown
-Djem LFna;Morocco;unknown
-Durban;South Africa;unknown
-Pretoria;South Africa;unknown
-Port Elizabeth;South Africa;unknown
-Bloemfontein;South Africa;unknown
-Pietermaritzburg;South Africa;unknown
-Knysna;South Africa;unknown
-George;South Africa;unknown
-Polokwane;South Africa;unknown
-Hermanus;South Africa;unknown
-Plettenberg Bay;South Africa;unknown
-Windhoek;Namibia;unknown
 Walvis Bay;Namibia;unknown
 Henties Bay;Namibia;unknown
 Swakopmund;Namibia;unknown
@@ -497,55 +123,6 @@ Lamu;Kenya;unknown
 Malindi;Kenya;unknown
 Eldoret;Kenya;unknown
 Nakuru;Kenya;unknown
-Kisumu;Kenya;unknown
-Mombasa;Kenya;unknown
-Nairobi;Kenya;unknown
-Kampala;Uganda;unknown
-Gulu;Uganda;unknown
-Lira;Uganda;unknown
-Mbarara;Uganda;unknown
-Jinja;Uganda;unknown
-Bwizibwera;Uganda;unknown
-Mbale;Uganda;unknown
-Mukono;Uganda;unknown
-Kasese;Uganda;unknown
-Masaka;Uganda;unknown
-Douala;Cameroon;unknown
-Yaound;Cameroon;unknown
-Limbe;Cameroon;unknown
-Kribi;Cameroon;unknown
-Garoua;Cameroon;unknown
-Bamenda;Cameroon;unknown
-Foumban;Cameroon;unknown
-Bafoussam;Cameroon;unknown
-Ngaoundr;Cameroon;unknown
-Maroua;Cameroon;unknown
-Mbalmayo;Cameroon;unknown
-Buea;Cameroon;unknown
-Dschang;Cameroon;unknown
-Kumba;Cameroon;unknown
-Ebolowa;Cameroon;unknown
-Nkongsamba;Cameroon;unknown
-Bangangt;Cameroon;unknown
-Tiko;Cameroon;unknown
-Eda;Cameroon;unknown
-Bandjoun;Cameroon;unknown
-Mamfe;Cameroon;unknown
-Koussri;Cameroon;unknown
-Kumbo;Cameroon;unknown
-Bangui;Central African Republic;unknown
-Nola;Central African Republic;unknown
-Boali;Central African Republic;unknown
-Berbrati;Central African Republic;unknown
-Bouar;Central African Republic;unknown
-Bangassou;Central African Republic;unknown
-Bria;Central African Republic;unknown
-Bambari;Central African Republic;unknown
-Bozoum;Central African Republic;unknown
-Birao;Central African Republic;unknown
-Carnot;Central African Republic;unknown
-Bouca;Central African Republic;unknown
-Paoua;Central African Republic;unknown
 N'Dl;Central African Republic;unknown
 Alindao;Central African Republic;unknown
 Ouadda;Central African Republic;unknown
@@ -735,7 +312,7 @@ Socotra Island;Yemen;unknown
 Sana'a;Yemen;unknown
 Zabd;Yemen;unknown
 Amman;Jordan;unknown
-Jerash / Jarash;Jordan;unknown
+Jerash   Jarash;Jordan;unknown
 Cappadocia;Turkey;unknown
 Hammamat Main;Jordan;unknown
 Aqaba;Jordan;unknown
@@ -1642,20 +1219,16 @@ Merida;Mexico;unknown
 Todos Santos;Mexico;unknown
 San Miguel de Allende;Mexico;unknown
 Huatulco;Mexico;unknown
-Playa del Carmen;Mexico;unknown
 Guanajuato;Mexico;unknown
 Guatemala City;Guatemala;unknown
-Antigua Guatemala;Guatemala;unknown
 Flores;Guatemala;unknown
 Melchor de Mencos;Guatemala;unknown
 Panajachel;Guatemala;unknown
 Puerto Barrios;Guatemala;unknown
 Puerto San Jos;Guatemala;unknown
-Quetzaltenango;Guatemala;unknown
 Sayaxch;Guatemala;unknown
 Coban;Guatemala;unknown
 San Pedro La Laguna;Guatemala;unknown
-Chichicastenango;Guatemala;unknown
 Huehuetenango;Guatemala;unknown
 Lvingston;Guatemala;unknown
 Belize City;Belize;unknown
@@ -1669,7 +1242,6 @@ Benque Viejo del Carmen;Belize;unknown
 San Pedro Columbia;Belize;unknown
 Big Creek;Belize;unknown
 Crooked Tree;Belize;unknown
-San Salvador;El Salvador;unknown
 San Miguel;El Salvador;unknown
 Santa Ana;El Salvador;unknown
 Juaya;El Salvador;unknown
@@ -1723,7 +1295,6 @@ Solentiname;Nicaragua;unknown
 San Juan Del Norte;Nicaragua;unknown
 Masachapa;Nicaragua;unknown
 Masaya;Nicaragua;unknown
-San Jos;Costa Rica;unknown
 Cartago;Costa Rica;unknown
 Dominical;Costa Rica;unknown
 Alajuela;Costa Rica;unknown
@@ -1803,7 +1374,6 @@ Pereira;Colombia;unknown
 Bogot;Colombia;unknown
 Bucaramanga;Colombia;unknown
 Barranquilla;Colombia;unknown
-Cartagena;Colombia;unknown
 Medelln;Colombia;unknown
 Neiva;Colombia;unknown
 Santa Marta;Colombia;unknown
@@ -1856,7 +1426,6 @@ Cayenne;French Guiana;unknown
 Kourou;French Guiana;unknown
 Saint-Laurent;French Guiana;unknown
 Saint-Georges;French Guiana;unknown
-Lima;Peru;unknown
 Arequipa;Peru;unknown
 Ayacucho;Peru;unknown
 Cajamarca;Peru;unknown
@@ -1868,7 +1437,6 @@ Trujillo;Peru;unknown
 Brasilia;Brazil;unknown
 Florianopolis;Brazil;unknown
 Fortalenza;Brazil;unknown
-Porto Alegre;Brazil;unknown
 Sucre;Bolivia;unknown
 Rurrenbaque;Bolivia;unknown
 Cochabamba;Bolivia;unknown
@@ -1877,7 +1445,6 @@ Potosi;Bolivia;unknown
 Santa Cruz;Bolivia;unknown
 Tarija;Bolivia;unknown
 Tupiza;Bolivia;unknown
-Asuncin;Paraguay;unknown
 Ciudad del Este;Paraguay;unknown
 Encarnacin;Paraguay;unknown
 Filadelfia;Paraguay;unknown
@@ -1886,7 +1453,6 @@ Villeta;Paraguay;unknown
 Pilar;Paraguay;unknown
 Aregua;Paraguay;unknown
 Villarrica;Paraguay;unknown
-Montevideo;Uruguay;unknown
 Chuy;Uruguay;unknown
 Colonia (Colonia del Sacramento);Uruguay;unknown
 Durazno;Uruguay;unknown
@@ -1906,16 +1472,10 @@ Salta;Argentina;unknown
 San Carlos de Bariloche;Argentina;unknown
 San Juan;Argentina;unknown
 San Miguel de Tucuman;Argentina;unknown
-Santiago;Chile;unknown
 Concepcin;Chile;unknown
 Iquique;Chile;unknown
 La Serena;Chile;unknown
 Valparaso;Chile;unknown
 Vina del Mar;Chile;unknown
-Punta Arenas;Chile;unknown
-El Colorado;Chile;unknown
 Portillo;Chile;unknown
-Torres del Paine;Chile;unknown
 Pichilemu;Chile;unknown
-El Colorado;Chile;unknown
-Sao Paulo;Brazil;unknown

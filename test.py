@@ -53,14 +53,16 @@ def get_and_save_weather(weather, country_name, city_name):
         udata = [
             city_name.decode(dec_str, 'ignore'),
             country_name.decode(dec_str, 'ignore'),
-            'unknown'
+            'location error',
+            weather.url
         ]
         writeCsv(udata, 'unknown.csv')
     except:
         udata = [
             city_name.decode(dec_str, 'ignore'),
             country_name.decode(dec_str, 'ignore'),
-            'unknown'
+            'unknown',
+            weather.url
         ]
         writeCsv(udata, 'unknown.csv')
         print(" >> can't get", city_name, country_name)
@@ -73,11 +75,11 @@ def get_line_cfg():
         with open('app.json', 'r') as f:
             config = json.load(f)
     except:
-        config = {'line': 4}
+        config = {'line': 1}
     try:
         return config['line']
     except:
-        return 4
+        return 1
 
 def save_cgf(line):
     config = {'line': line}
@@ -112,10 +114,10 @@ def process_csv(file_name="input.csv"):
             i += 1
             if i < line_num:
                 continue
-            print(line.rstrip().split(';'))
             city_info = line.rstrip().split(';')
             city_name = city_info[0].encode("utf-8").strip()
             country_name = city_info[1].encode("utf-8").strip()
+            print(country_name, city_name)
             if country_name == "":
                 continue
             print(i, "req: ", weather.req_cnt)
