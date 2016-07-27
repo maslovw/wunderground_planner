@@ -119,8 +119,8 @@ def process_csv(file_name="input.csv"):
             if country_name == "":
                 continue
             print(i, "req: ", weather.req_cnt)
-            if not get_and_save_weather(weather, country_name, city_name):
-                break
+            get_and_save_weather(weather, country_name, city_name)
+            #    break
             save_cgf(i)
 
 process_csv("source.csv")
