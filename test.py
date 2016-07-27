@@ -110,8 +110,9 @@ def process_csv(file_name="input.csv"):
     with open(file_name, 'r', newline='') as csvfile:
         for line in csvfile:
             i += 1
-            if i > line_num:
-                print(line.rstrip().split(';'))
+            if i < line_num:
+                continue
+            print(line.rstrip().split(';'))
             city_info = line.rstrip().split(';')
             city_name = city_info[0].encode("utf-8").strip()
             country_name = city_info[1].encode("utf-8").strip()
@@ -120,7 +121,7 @@ def process_csv(file_name="input.csv"):
             print(i, "req: ", weather.req_cnt)
             if not get_and_save_weather(weather, country_name, city_name):
                 break
-    save_cgf(i)
+            save_cgf(i)
 
-process_csv("unknown.csv")
+process_csv("source.csv")
 #wb_out.save('db.xlsx')
