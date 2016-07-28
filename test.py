@@ -3,7 +3,7 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 from getWeatherFree import Wunderground
 import json
-import io
+import weather_error
 
 def writeCsv(udata, file_name ='db.csv'):
     with open(file_name, 'a', newline='') as csvfile:
@@ -48,6 +48,9 @@ def get_and_save_weather(weather, country_name, city_name):
         except:
             print(" >> can't write to the file")
             return False
+    except weather_error.KeyError as e:
+        print("Key Error: ", e.value)
+        raise e
     except NameError as e:
         print(" >> ", e)
         udata = [
@@ -121,8 +124,10 @@ def process_csv(file_name="input.csv"):
             if country_name == "":
                 continue
             print(i, "req: ", weather.req_cnt)
-            get_and_save_weather(weather, country_name, city_name)
-            #    break
+            try:
+                get_and_save_weather(weather, country_name, city_name)
+            except weather_error.KeyError:
+                break
             save_cgf(i)
 
 process_csv("source.csv")

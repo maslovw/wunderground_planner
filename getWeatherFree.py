@@ -7,6 +7,7 @@ from urllib.request import Request
 from urllib.parse import quote
 from bs4 import BeautifulSoup
 from config import WeatherConfig
+import weather_error
 
 class Wunderground:
     key = ""
@@ -81,7 +82,7 @@ class Wunderground:
         #print("getting from the web")
         if self.req_cnt >= self.max_req_a_day:
             if self.__switch_key() is None:
-                raise
+                raise weather_error.KeyError('no valid key')
         self.url = self.url_head + self.key + "/geolookup/planner_" + dates + "/q/" + quote(country) + "/" + quote(city) + ".json"
         html = urlopen(self.url).read()
         json_str = json.loads(html.decode("utf-8", errors="ignore"))
