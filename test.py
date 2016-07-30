@@ -136,7 +136,8 @@ def process_csv(file_name="input.csv"):
             print(i, "req: ", weather.req_cnt)
 
             try:
-                get_and_save_weather(weather, country_name, city_name)
+                if not get_and_save_weather(weather, country_name, city_name):
+                    raise 
             except:
                 try:
                     get_and_save_weather_wbase(country_name, city_name)
