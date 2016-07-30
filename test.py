@@ -142,6 +142,7 @@ def process_csv(file_name="input.csv"):
                     get_and_save_weather(weather, country_name, city_name)
                 except weather_error.KeyError:
                     #break
+                    print("no more keys")
             save_cgf(i)
 
 process_csv("source.csv")
