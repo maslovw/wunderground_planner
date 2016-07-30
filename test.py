@@ -70,6 +70,7 @@ def get_and_save_weather(weather, country_name, city_name):
             weather.url
         ]
         writeCsv(udata, 'unknown.csv')
+        return False
     except:
         udata = [
             city_name.decode(dec_str, 'ignore'),
@@ -136,7 +137,8 @@ def process_csv(file_name="input.csv"):
             print(i, "req: ", weather.req_cnt)
 
             try:
-                get_and_save_weather(weather, country_name, city_name)
+                if not get_and_save_weather(weather, country_name, city_name):
+                    raise
             except:
                 try:
                     get_and_save_weather_wbase(country_name, city_name)
