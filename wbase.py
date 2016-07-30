@@ -15,7 +15,7 @@ class weatherbase():
 
     def url_open(self, req):
         time = random.choice([3, 5, 7, 11, 13, 17, 19])
-        sleep(time)
+        #sleep(time)
         return urlopen(req)
 
     def find_city(self, city_name, country):

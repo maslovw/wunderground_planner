@@ -44,7 +44,8 @@ def write_data_csv(city_info):
 def get_and_save_weather_wbase(country_name, city_name):
     print("wbase:", city_name, country_name)
     w = wbase.weatherbase()
-    city_info = w.get_weather(city_name, country_name)
+    dec_str = 'ascii'
+    city_info = w.get_weather(city_name.decode(dec_str, 'ignore'), country_name.decode(dec_str, 'ignore'))
     write_data_csv(city_info)
 
 def get_and_save_weather(weather, country_name, city_name):
@@ -142,9 +143,6 @@ def process_csv(file_name="input.csv"):
             except:
                 try:
                     get_and_save_weather_wbase(country_name, city_name)
-                    # except weather_error.KeyError:
-                    #     #break
-                    #     print("no more keys")
                 except:
                     print("no data")
             save_cgf(i)
