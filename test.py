@@ -4,6 +4,7 @@ from openpyxl import load_workbook
 from getWeatherFree import Wunderground
 import json
 import weather_error
+import wbase
 
 def writeCsv(udata, file_name ='db.csv'):
     with open(file_name, 'a', newline='') as csvfile:
@@ -18,33 +19,42 @@ def readCsv(file_name='db.csv', off=0):
         i = csvfile.tell()
     return i
 
+def write_data_csv(city_info):
+    udata = [
+        city_info['city_name'],
+        city_info['country_name'],
+        city_info['lat'],
+        city_info['lon'],
+        city_info['temp1'],
+        city_info['temp2'],
+        city_info['temp3'],
+        city_info['temp4'],
+        city_info['temp5'],
+        city_info['temp6'],
+        city_info['temp8'],
+        city_info['temp7'],
+        city_info['temp9'],
+        city_info['temp10'],
+        city_info['temp11'],
+        city_info['temp12'],
+        city_info['city_url']
+    ]
+    writeCsv(udata)
+
+def get_and_save_weather_wbase(country_name, city_name):
+    print("wbase:", city_name, country_name)
+    w = wbase.weatherbase()
+    city_info = w.get_weather(city_name, country_name)
+    write_data_csv(city_info)
+
 def get_and_save_weather(weather, country_name, city_name):
     dec_str = 'ascii'
 
-    print(city_name, country_name)
+    print("wunderground:", city_name, country_name)
     try:
         city_info = weather.get_year_weather(country_name, city_name)
         try:
-            udata = [
-                city_info['city_name'],
-                city_info['country_name'],
-                city_info['lat'],
-                city_info['lon'],
-                city_info['temp1'],
-                city_info['temp2'],
-                city_info['temp3'],
-                city_info['temp4'],
-                city_info['temp5'],
-                city_info['temp6'],
-                city_info['temp8'],
-                city_info['temp7'],
-                city_info['temp9'],
-                city_info['temp10'],
-                city_info['temp11'],
-                city_info['temp12'],
-                city_info['city_url']
-            ]
-            writeCsv(udata)
+            write_data_csv(city_info)
         except:
             print(" >> can't write to the file")
             return False
@@ -124,10 +134,14 @@ def process_csv(file_name="input.csv"):
             if country_name == "":
                 continue
             print(i, "req: ", weather.req_cnt)
+
             try:
-                get_and_save_weather(weather, country_name, city_name)
-            except weather_error.KeyError:
-                break
+                get_and_save_weather_wbase(country_name, city_name)
+            except:
+                try:
+                    get_and_save_weather(weather, country_name, city_name)
+                except weather_error.KeyError:
+                    #break
             save_cgf(i)
 
 process_csv("source.csv")
