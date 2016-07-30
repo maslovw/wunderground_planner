@@ -136,13 +136,15 @@ def process_csv(file_name="input.csv"):
             print(i, "req: ", weather.req_cnt)
 
             try:
-                get_and_save_weather_wbase(country_name, city_name)
+                get_and_save_weather(weather, country_name, city_name)
             except:
                 try:
-                    get_and_save_weather(weather, country_name, city_name)
-                except weather_error.KeyError:
-                    #break
-                    print("no more keys")
+                    get_and_save_weather_wbase(country_name, city_name)
+                    # except weather_error.KeyError:
+                    #     #break
+                    #     print("no more keys")
+                except:
+                    print("no data")
             save_cgf(i)
 
 process_csv("source.csv")

@@ -3,9 +3,7 @@ from time import sleep
 import json
 import os.path
 from urllib.request import urlopen
-from urllib.request import Request
 from urllib.parse import quote
-from bs4 import BeautifulSoup
 from config import WeatherConfig
 import weather_error
 
@@ -40,6 +38,8 @@ class Wunderground:
         max_temp = json_str['trip']['temp_high']['avg']['C']
         min_temp = json_str['trip']['temp_low']['avg']['C']
         city_url = json_str['location']['wuiurl']
+        if max_temp is None:
+            raise weather_error.NoWeather("Temp is none ", city_url)
         return [city_name, country_name, lat, lon, max_temp, min_temp, city_url]
 
     def __getDirName(self, country, city):
@@ -91,14 +91,6 @@ class Wunderground:
         self.cfg.save()
         sleep(self.sleep_time)
         return self.__get_weather_from_json(json_str)
-
-    def __get_weather_from_html(self, country, city, date):
-        url_head = "https://www.wunderground.com/history/airport/EDDV/2016/6/1/PlannerHistory.html?dayend=0&monthend=0&yearend=0&activity=Golf"
-        req = Request(url_head)
-        req.add_header('User-Agent', 'Mozilla/5.0')
-        html = urlopen(req).read()
-        soup = BeautifulSoup(html, "html.parser")
-        div = soup.find("div", id='highBall')
 
     def get_weather(self, country, city, dates):
         file_name = self.__getFileName(country, city, dates)
