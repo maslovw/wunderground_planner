@@ -38,7 +38,7 @@ class Wunderground:
         max_temp = json_str['trip']['temp_high']['avg']['C']
         min_temp = json_str['trip']['temp_low']['avg']['C']
         city_url = json_str['location']['wuiurl']
-        if max_temp is None:
+        if max_temp == "":
             raise weather_error.NoWeather("Temp is none ", city_url)
         return [city_name, country_name, lat, lon, max_temp, min_temp, city_url]
 

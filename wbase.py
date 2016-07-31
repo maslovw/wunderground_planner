@@ -2,6 +2,7 @@
 from urllib.request import urlopen
 from urllib.request import Request
 import re
+import os.path
 from bs4 import BeautifulSoup
 from urllib.parse import quote
 import random
@@ -15,8 +16,21 @@ class weatherbase():
 
     def url_open(self, req):
         time = random.choice([3, 5, 7, 11, 13, 17, 19])
-        #sleep(time)
+        sleep(time)
         return urlopen(req)
+
+    def __saveFile(self, html, country, city):
+        file_name = self.__getFileName(country, city)
+        if not os.path.exists(self.__getDirName(country, city)):
+            os.makedirs(self.__getDirName(country, city))
+        with open(file_name, "wb") as html_file:
+            html_file.write(html)
+
+    def __getDirName(self, country, city):
+        return "countrys/" + country + "/" + city
+
+    def __getFileName(self, country, city):
+        return self.__getDirName(country, city) + "/" + ".".join([country, city]) + ".html"
 
     def find_city(self, city_name, country):
         self.url=self.find_url(city_name, country)
@@ -24,6 +38,7 @@ class weatherbase():
         req = Request(self.url)
         req.add_header('User-Agent', 'Mozilla/5.0')
         html = self.url_open(req).read()
+        self.__saveFile(html, country, city_name)
         self.soup = BeautifulSoup(html, "html.parser")
         return self.soup
 

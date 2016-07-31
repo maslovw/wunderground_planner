@@ -19,8 +19,10 @@ def readCsv(file_name='db.csv', off=0):
         i = csvfile.tell()
     return i
 
-def write_data_csv(city_info):
+def write_data_csv(city_info, city, country):
+    dec_str = 'ascii'
     udata = [
+        city.decode(dec_str, 'ignore'), country.decode(dec_str, 'ignore'),
         city_info['city_name'],
         city_info['country_name'],
         city_info['lat'],
@@ -46,7 +48,7 @@ def get_and_save_weather_wbase(country_name, city_name):
     w = wbase.weatherbase()
     dec_str = 'ascii'
     city_info = w.get_weather(city_name.decode(dec_str, 'ignore'), country_name.decode(dec_str, 'ignore'))
-    write_data_csv(city_info)
+    write_data_csv(city_info, city_name, country_name)
 
 def get_and_save_weather(weather, country_name, city_name):
     dec_str = 'ascii'
@@ -55,7 +57,7 @@ def get_and_save_weather(weather, country_name, city_name):
     try:
         city_info = weather.get_year_weather(country_name, city_name)
         try:
-            write_data_csv(city_info)
+            write_data_csv(city_info, city_name, country_name)
         except:
             print(" >> can't write to the file")
             return False
