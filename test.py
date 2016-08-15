@@ -105,7 +105,7 @@ def save_cgf(line):
 
 def process_excel(file_name="160720_RIKA_CONTENT.xlsx"):
     wb = load_workbook(file_name)
-    ws = wb.get_sheet_by_name("CITIES")
+    ws = wb.active
 
     i = get_line_cfg()
     weather = Wunderground()
@@ -117,8 +117,15 @@ def process_excel(file_name="160720_RIKA_CONTENT.xlsx"):
             city_name = ws['A' + str(i)].value.encode("utf-8").strip()
             country_name = ws['B' + str(i)].value.encode("utf-8").strip()
             print(i, "req: ", weather.req_cnt)
-            if not get_and_save_weather(weather, country_name, city_name):
-                break
+
+            try:
+                if not get_and_save_weather(weather, country_name, city_name):
+                    raise
+            except:
+                try:
+                    get_and_save_weather_wbase(country_name, city_name)
+                except:
+                    print("no data")
             i += 1
             save_cgf(i)
 
@@ -149,5 +156,6 @@ def process_csv(file_name="input.csv"):
                     print("no data")
             save_cgf(i)
 
-process_csv("source.csv")
+#process_csv("source.csv")
+process_excel("Book1.xlsx")
 #wb_out.save('db.xlsx')
